@@ -1,0 +1,90 @@
+*{
+    font-family: arial
+}
+.layout{
+    width: 500px;
+    height: 590px;
+    margin: 30px auto;
+    background-color: rgb(248, 248, 248);
+    box-shadow: 7px 7px 15px #DDD;
+}
+div.slectBox{
+    height: 10%;
+}
+select{
+    margin: 20px;
+    height: 40px;
+    font-size: 20px;
+    background-color: white;
+    border: 2px solid #EEE;
+    box-shadow: 1px 1px 0px #EEE;
+}
+select:hover{
+    box-shadow: 0px 0px 6px;
+}
+.displayGame{
+    width: 100%;
+    height: 86.4%;
+    padding-top: 20px;
+    position: relative;
+}
+.tabelGame{
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    background-color: #14bdac;
+    width: 80%;
+    height: 70%;
+    text-align: center;
+    border: none;
+}
+.tabelGame:hover{
+    transform: scale(1.08);
+    transition: all 1s ease-out;
+}
+.tabelGame:not( :hover ){
+    transition: all 1s ease-in;
+}
+td{
+    width: 125px;
+    height: 115px;
+    max-height: 115px;
+    max-width: 125px;
+    font-size: 100px;
+    color: white;
+}
+#case2, #case5, #case8{
+    border-left: 5px solid #0da192;
+    border-right: 5px solid #0da192;
+}
+.rows2 td{
+    border-bottom: 5px solid #0da192;
+    border-top: 5px solid #0da192;
+}
+td:hover{
+    cursor: pointer;
+    box-shadow: 0px 0px 2px inset;
+}
+#replay{
+    height: 40px;
+    font-size: 20px;
+    width: 40%;
+    margin-left: 40PX;
+    background-color: white;
+    border: 2px solid #EEE;
+    box-shadow: 1px 1px 0px #EEE;
+}
+#replay:hover{
+    box-shadow: 0px 0px 6px;
+}
+.alert{
+    position: absolute;
+    top: 101px;
+    background-color: rgba(13, 161, 146, 0.49);
+    width: 500px;
+    height: 48px;
+    z-index: 1;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 40px;
+}
