@@ -1,1 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+<svg id="volume_up" xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                            viewBox="0 0 30 30">
+                            <path id="Path_3" data-name="Path 3" d="M0,0H30V30H0Z" fill="none" />
+                            <path id="Path_4" data-name="Path 4"
+                                d="M3,10.529v7.59H8.054l6.318,6.325V4.2L8.054,10.529Zm17.058,3.795a5.693,5.693,0,0,0-3.159-5.1V19.409A5.66,5.66,0,0,0,20.058,14.324ZM16.9,3.23V5.836a8.861,8.861,0,0,1,0,16.976v2.606a11.38,11.38,0,0,0,0-22.188Z"
+                                transform="translate(0.628 0.676)" fill="#c3a9ff" />
+                        </svg>

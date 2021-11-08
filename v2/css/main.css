@@ -29,6 +29,7 @@ nav .vs-computer .back-to-choose-vs button {
   height: 31px;
   cursor: pointer;
   background-color: #c3a9ff;
+  border-radius: 5px;
 }
 nav .vs-computer .choose-level {
   display: inline-block;
@@ -52,7 +53,7 @@ nav .config-icons .icon {
   cursor: pointer;
   margin-left: 5px;
 }
-nav .config-icons .icon:hover svg {
+nav .config-icons .icon:hover img {
   transform: translateY(-1px);
   transition: all 0.3s ease-in-out;
 }
