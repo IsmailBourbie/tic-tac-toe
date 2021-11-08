@@ -84,6 +84,45 @@ nav .config-icons .icon:hover img {
   height: 140px;
 }
 
+.result .result-col > div {
+  display: inline-block;
+  background-color: #c3a9ff;
+  color: #ffffff;
+  width: 100px;
+  height: 60px;
+  max-height: 60px;
+  padding: 10px;
+  border-radius: 8px;
+}
+.result .result-col > div.x-result {
+  text-align: left;
+}
+.result .result-col > div.ties-result {
+  text-align: center;
+  width: 70px;
+}
+.result .result-col > div.ties-result .result-counter {
+  font-size: 25px;
+}
+.result .result-col > div.ties-result p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.result .result-col > div.o-result {
+  text-align: right;
+}
+.result .result-col > div .result-counter {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 10px;
+}
+.result .result-col > div svg {
+  position: relative;
+  top: 2px;
+}
+
 button.selected {
   border: 1px solid #c3a9ff !important;
   border-radius: 3px;
