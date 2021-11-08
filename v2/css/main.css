@@ -58,6 +58,32 @@ nav .config-icons .icon:hover img {
   transition: all 0.3s ease-in-out;
 }
 
+.game {
+  padding: 100px 0;
+}
+.game .game-content {
+  position: relative;
+  display: inline-block;
+}
+.game .game-content svg {
+  position: absolute;
+  left: 0;
+  z-index: 1;
+}
+.game .game-content table {
+  margin: 0 auto;
+  z-index: 2;
+  position: relative;
+  border-spacing: 8px;
+}
+.game .game-content table tbody tr {
+  font-weight: 100;
+}
+.game .game-content table tbody tr td {
+  width: 140px;
+  height: 140px;
+}
+
 button.selected {
   border: 1px solid #c3a9ff !important;
   border-radius: 3px;

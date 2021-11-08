@@ -14,10 +14,11 @@
 
 </body>
 
+<!-- NAVBAR START -->
 <nav>
     <div class="container p-0">
         <div class="row">
-            <div class="col-lg-8">
+            <div class="col-lg-6">
                 <div class="choose-vs" hidden>
                     <button class="selected" id="vs-friend">FRIEND</button>
                     <button id="vs-computer">COMPUTER</button>
@@ -35,7 +36,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 text-right">
+            <div class="col-lg-6 text-right">
                 <ul class="config-icons">
                     <li class="icon" role="button">
                         <img src="icons/volume_up.svg" alt="volume up" srcset="">
@@ -54,5 +55,49 @@
         </div>
     </div>
 </nav>
+<!-- NAVBAR END -->
+
+<!-- GAME TABLE START -->
+<div class="game">
+    <div class="container text-center">
+        <div class="game-content">
+            <svg xmlns="http://www.w3.org/2000/svg" width="448" height="448" viewBox="0 0 448 448">
+                <g id="line" transform="translate(9.3 -1)">
+                    <line id="Line_4" data-name="Line 4" x1="448" transform="translate(-9.3 301)" fill="none"
+                        stroke="#c3a9ff" stroke-width="8" />
+                    <line id="Line_3" data-name="Line 3" x1="448" transform="translate(-9.3 153)" fill="none"
+                        stroke="#c3a9ff" stroke-width="8" />
+                    <line id="Line_2" data-name="Line 2" y1="448" transform="translate(290.7 1)" fill="none"
+                        stroke="#c3a9ff" stroke-width="8" />
+                    <line id="Line_1" data-name="Line 1" y1="448" transform="translate(143 1)" fill="none"
+                        stroke="#c3a9ff" stroke-width="8" />
+                </g>
+            </svg>
+
+
+            <table class="tabelGame">
+                <tbody>
+                    <tr class="rows1">
+                        <td class="case" id="case1" role="button"></td>
+                        <td class="case" id="case2" role="button"></td>
+                        <td class="case" id="case3" role="button"></td>
+                    </tr>
+                    <tr class="rows2">
+                        <td class="case" id="case4" role="button"></td>
+                        <td class="case" id="case5" role="button"></td>
+                        <td class="case" id="case6" role="button"></td>
+                    </tr>
+                    <tr class="rows3">
+                        <td class="case" id="case7" role="button"></td>
+                        <td class="case" id="case8" role="button"></td>
+                        <td class="case" id="case9" role="button"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>
+<!-- GAME TABLE END -->
 
 </html>
