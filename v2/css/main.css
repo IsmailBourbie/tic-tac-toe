@@ -140,35 +140,25 @@ footer .container {
   border-top: 1px solid #dbe2e8;
 }
 footer .container .copyright {
-  font-size: 14px;
-  color: #161A1D;
+  font-size: 16px;
+  color: #c3a9ff;
 }
 footer .container .copyright a {
-  color: #161A1D;
+  color: #c3a9ff;
   text-decoration: none;
 }
 footer .container .copyright a:hover {
   background-color: #c3a9ff;
-  transition: background 0.3s ease-in-out;
+  color: #ffffff;
+  transition: all 0.3s ease-in-out;
 }
 footer .container .source-code a {
-  color: #161A1D;
+  color: #c3a9ff;
   text-decoration: none;
-}
-footer .container .source-code a > div {
-  background-image: url("../icons/code.svg");
-  background-repeat: no-repeat;
-  display: inline-block;
-  width: 15.5px;
-  height: 12.5px;
 }
 footer .container .source-code a:hover {
   transition: all 0.3s ease-in-out;
   color: #c3a9ff;
-}
-footer .container .source-code a:hover > div {
-  background-image: url("../icons/code-purple.svg");
-  transition: all 0.3s ease-in-out;
 }
 
 button.selected {
