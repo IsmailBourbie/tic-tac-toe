@@ -39,8 +39,41 @@ for (let i = 0; i < changeLevelBtn.length; i++) {
 
 // Change level End
 
+// draw shape on case click start
+// draw shape on case click end
+
+let tableCase = document.getElementsByClassName('case'),
+    oTurn = false,
+    imgName = 'x-shape';
+
+for (let i = 0; i < tableCase.length; i++) {
+    tableCase.item(i).addEventListener('click', function () {
+
+        if (!this.hasChildNodes()) {
+
+            if (oTurn) {
+                oTurn = false;
+                imgName = 'o-shape';
+            } else {
+                oTurn = true;
+                imgName = 'x-shape';
+            }
+            myShape = createImgShape(imgName, 'svg');
+            this.appendChild(myShape);
+
+        }
+
+    });
+
+}
 
 
 // Helper Functions start
+function createImgShape(imgName, imgType, imgAlt = '') {
+    let imageNode = document.createElement('img');
+    imageNode.src = 'icons/' + imgName + '.' + imgType;
+    imageNode.alt = imgAlt;
 
+    return imageNode
+}
 // Helper Functions end
