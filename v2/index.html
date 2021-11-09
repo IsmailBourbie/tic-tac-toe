@@ -6,171 +6,173 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap-grid.css">
+    <link rel="stylesheet" href="lib/animate-css/animate.min.css">
     <link rel="stylesheet" href="css/main.css">
     <title>Tic-Tac-Toe</title>
 </head>
 
 <body>
 
-</body>
-
-<!-- NAVBAR START -->
-<nav>
-    <div class="container p-0">
-        <div class="row">
-            <div class="col-lg-6">
-                <div class="choose-vs" hidden>
-                    <button class="selected" id="vs-friend">FRIEND</button>
-                    <button id="vs-computer">COMPUTER</button>
-                </div>
-                <div class="vs-computer">
-                    <div class="back-to-choose-vs">
-                        <button id="back">
-                            <img src="icons/back-btn.svg" alt="" srcset="">
-                        </button>
+    <!-- NAVBAR START -->
+    <nav>
+        <div class="container p-0">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="choose-vs" hidden>
+                        <button class="selected" id="vs-friend">FRIEND</button>
+                        <button id="vs-computer">COMPUTER</button>
                     </div>
-                    <div class="choose-level">
-                        <button class="selected" id="easy-level">EASY</button>
-                        <button id="medium-level">MEDIUM</button>
-                        <button id="hard-level">HARD</button>
+                    <div class="vs-computer">
+                        <div class="back-to-choose-vs">
+                            <button id="back">
+                                <img src="icons/back-btn.svg" alt="" srcset="">
+                            </button>
+                        </div>
+                        <div class="choose-level">
+                            <button class="selected" id="easy-level">EASY</button>
+                            <button id="medium-level">MEDIUM</button>
+                            <button id="hard-level">HARD</button>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-6 text-right">
-                <ul class="config-icons">
-                    <li class="icon" role="button">
-                        <img src="icons/volume_up.svg" alt="volume up" srcset="">
-                    </li>
-                    <li class="icon" role="button">
-                        <img src="icons/reset.svg" alt="Reset" srcset="">
+                <div class="col-lg-6 text-right">
+                    <ul class="config-icons">
+                        <li class="icon" role="button">
+                            <img src="icons/volume_up.svg" alt="volume up" srcset="">
+                        </li>
+                        <li class="icon" role="button">
+                            <img src="icons/reset.svg" alt="Reset" srcset="">
 
 
-                    </li>
-                    <li class="icon" role="button">
-                        <img src="icons/clear.svg" alt="Clear" srcset="">
+                        </li>
+                        <li class="icon" role="button">
+                            <img src="icons/clear.svg" alt="Clear" srcset="">
 
-                    </li>
-                </ul>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
-</nav>
-<!-- NAVBAR END -->
+    </nav>
+    <!-- NAVBAR END -->
 
 
-<main>
+    <main>
 
-    <!-- GAME TABLE START -->
-    <div class="game">
-        <div class="container text-center">
-            <div class="game-content">
-                <svg xmlns="http://www.w3.org/2000/svg" width="448" height="448" viewBox="0 0 448 448">
-                    <g id="line" transform="translate(9.3 -1)">
-                        <line id="Line_4" data-name="Line 4" x1="448" transform="translate(-9.3 301)" fill="none"
-                            stroke="#c3a9ff" stroke-width="8" />
-                        <line id="Line_3" data-name="Line 3" x1="448" transform="translate(-9.3 153)" fill="none"
-                            stroke="#c3a9ff" stroke-width="8" />
-                        <line id="Line_2" data-name="Line 2" y1="448" transform="translate(290.7 1)" fill="none"
-                            stroke="#c3a9ff" stroke-width="8" />
-                        <line id="Line_1" data-name="Line 1" y1="448" transform="translate(143 1)" fill="none"
-                            stroke="#c3a9ff" stroke-width="8" />
-                    </g>
-                </svg>
+        <!-- GAME TABLE START -->
+        <div class="game">
+            <div class="container text-center">
+                <div class="game-content">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="448" height="448" viewBox="0 0 448 448">
+                        <g id="line" transform="translate(9.3 -1)">
+                            <line id="Line_4" data-name="Line 4" x1="448" transform="translate(-9.3 301)" fill="none"
+                                stroke="#c3a9ff" stroke-width="8" />
+                            <line id="Line_3" data-name="Line 3" x1="448" transform="translate(-9.3 153)" fill="none"
+                                stroke="#c3a9ff" stroke-width="8" />
+                            <line id="Line_2" data-name="Line 2" y1="448" transform="translate(290.7 1)" fill="none"
+                                stroke="#c3a9ff" stroke-width="8" />
+                            <line id="Line_1" data-name="Line 1" y1="448" transform="translate(143 1)" fill="none"
+                                stroke="#c3a9ff" stroke-width="8" />
+                        </g>
+                    </svg>
 
 
-                <table class="tabelGame">
-                    <tbody>
-                        <tr class="rows1">
-                            <td class="case" id="case1" role="button"></td>
-                            <td class="case" id="case2" role="button"></td>
-                            <td class="case" id="case3" role="button"></td>
-                        </tr>
-                        <tr class="rows2">
-                            <td class="case" id="case4" role="button"></td>
-                            <td class="case" id="case5" role="button"></td>
-                            <td class="case" id="case6" role="button"></td>
-                        </tr>
-                        <tr class="rows3">
-                            <td class="case" id="case7" role="button"></td>
-                            <td class="case" id="case8" role="button"></td>
-                            <td class="case" id="case9" role="button"></td>
-                        </tr>
-                    </tbody>
-                </table>
+                    <table class="tabelGame">
+                        <tbody>
+                            <tr class="rows1">
+                                <td class="case" id="case1" role="button"></td>
+                                <td class="case" id="case2" role="button"></td>
+                                <td class="case" id="case3" role="button"></td>
+                            </tr>
+                            <tr class="rows2">
+                                <td class="case" id="case4" role="button"></td>
+                                <td class="case" id="case5" role="button"></td>
+                                <td class="case" id="case6" role="button"></td>
+                            </tr>
+                            <tr class="rows3">
+                                <td class="case" id="case7" role="button"></td>
+                                <td class="case" id="case8" role="button"></td>
+                                <td class="case" id="case9" role="button"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
             </div>
-
         </div>
-    </div>
-    <!-- GAME TABLE END -->
+        <!-- GAME TABLE END -->
 
-    <!-- GAME RESULT START -->
-    <div class="result">
+        <!-- GAME RESULT START -->
+        <div class="result">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5 result-col text-right">
+                        <div class="x-result">
+                            <span class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="33.287" height="32.38"
+                                    viewBox="0 0 33.287 32.38">
+                                    <g id="X_shape" data-name="X shape" transform="translate(3.535 3.535)">
+                                        <path id="Path_5" data-name="Path 5" d="M26.218,0,0,25.31" fill="none"
+                                            stroke="#f5997c" stroke-linecap="round" stroke-width="5" />
+                                        <path id="Path_6" data-name="Path 6" d="M0,0,26.218,25.31" fill="none"
+                                            stroke="#f5997c" stroke-linecap="round" stroke-width="5" />
+                                    </g>
+                                </svg>
+                            </span>
+                            <span id="x-result-counter" class="result-counter">1</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 result-col text-center">
+                        <div class="ties-result">
+                            <p>TIES</p>
+                            <span id="tie-result-counter" class="result-counter">0</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 result-col text-left">
+                        <div class="o-result">
+                            <span id="o-result-counter" class="result-counter">2</span>
+                            <span class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                                    <g id="Ellipse_2" data-name="Ellipse 2" fill="none" stroke="#b4f8c8"
+                                        stroke-width="5">
+                                        <circle cx="16" cy="16" r="16" stroke="none" />
+                                        <circle cx="16" cy="16" r="13.5" fill="none" />
+                                    </g>
+                                </svg>
+
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- GAME RESULT END -->
+
+    </main>
+    <!-- FOOTER START -->
+    <footer>
         <div class="container">
             <div class="row">
-                <div class="col-lg-5 result-col text-right">
-                    <div class="x-result">
-                        <span class="icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="33.287" height="32.38"
-                                viewBox="0 0 33.287 32.38">
-                                <g id="X_shape" data-name="X shape" transform="translate(3.535 3.535)">
-                                    <path id="Path_5" data-name="Path 5" d="M26.218,0,0,25.31" fill="none"
-                                        stroke="#f5997c" stroke-linecap="round" stroke-width="5" />
-                                    <path id="Path_6" data-name="Path 6" d="M0,0,26.218,25.31" fill="none"
-                                        stroke="#f5997c" stroke-linecap="round" stroke-width="5" />
-                                </g>
-                            </svg>
-                        </span>
-                        <span id="x-result-counter" class="result-counter">1</span>
+                <div class="col text-left">
+                    <div class="copyright">
+                        © <a href="https://github.com/ismailBourbie/">Ismail Bourbie</a> 2021. All Rights Reserved.
                     </div>
                 </div>
-                <div class="col-lg-2 result-col text-center">
-                    <div class="ties-result">
-                        <p>TIES</p>
-                        <span id="tie-result-counter" class="result-counter">0</span>
-                    </div>
-                </div>
-                <div class="col-lg-5 result-col text-left">
-                    <div class="o-result">
-                        <span id="o-result-counter" class="result-counter">2</span>
-                        <span class="icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
-                                <g id="Ellipse_2" data-name="Ellipse 2" fill="none" stroke="#b4f8c8" stroke-width="5">
-                                    <circle cx="16" cy="16" r="16" stroke="none" />
-                                    <circle cx="16" cy="16" r="13.5" fill="none" />
-                                </g>
-                            </svg>
-
-                        </span>
+                <div class="col text-right">
+                    <div class="source-code">
+                        <a href="https://github.com/ismailBourbie/tic-tac-toe">
+                            Source code
+                            <img src="icons/code-purple.svg" alt="" srcset="">
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- GAME RESULT END -->
-
-</main>
-<!-- FOOTER START -->
-<footer>
-    <div class="container">
-        <div class="row">
-            <div class="col text-left">
-                <div class="copyright">
-                    © <a href="https://github.com/ismailBourbie/">Ismail Bourbie</a> 2021. All Rights Reserved.
-                </div>
-            </div>
-            <div class="col text-right">
-                <div class="source-code">
-                    <a href="https://github.com/ismailBourbie/tic-tac-toe">
-                        Source code
-                        <img src="icons/code-purple.svg" alt="" srcset="">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
-<!-- FOOTER END -->
+    </footer>
+    <!-- FOOTER END -->
 
 
+    <script src="js/app.js"></script>
+</body>
 
 </html>
