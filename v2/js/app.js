@@ -3,12 +3,17 @@ let vsComputerBtn = document.getElementById('vs-computer-btn'),
     vsComputerContainer = document.getElementById('vs-computer-container'),
     backToVsFriend = document.getElementById('back-to-vs-friend'),
     vsFriendBtn = document.getElementById('vs-friend-btn'),
-    vsFriendContainer = document.getElementById('vs-friend-container');
+    vsFriendContainer = document.getElementById('vs-friend-container'),
+    selectedBtnLevel = document.querySelector('.change-level-btn.selected'),
+    gameTable = document.getElementById('gameTable');
 
 vsComputerBtn.addEventListener('click', function () {
     this.parentElement.style.display = 'none';
     vsComputerContainer.style.display = 'inline-block';
-    // alert('computer');
+
+
+    // Change the mode to easy
+    gameTable.style.backgroundImage = "url('icons/table/table-" + selectedBtnLevel.dataset.level + ".svg')";
 });
 
 vsFriendBtn.addEventListener('click', function () {
@@ -19,6 +24,10 @@ vsFriendBtn.addEventListener('click', function () {
 backToVsFriend.addEventListener('click', function () {
     this.parentElement.parentElement.style.display = 'none';
     vsFriendContainer.style.display = 'inline-block';
+
+    // Change the mode to nrml
+    gameTable.style.backgroundImage = "url('icons/table/table-nrml.svg')";
+
 });
 // Change vs-player End
 
@@ -28,10 +37,12 @@ let changeLevelBtn = document.getElementsByClassName('change-level-btn');
 
 for (let i = 0; i < changeLevelBtn.length; i++) {
     changeLevelBtn.item(i).addEventListener('click', function () {
-        let selectedBtn = document.querySelector('button.change-level-btn.selected');
-        selectedBtn.classList.remove('selected');
-
+        selectedBtnLevel.classList.remove('selected');
         this.classList.add('selected');
+
+        selectedBtnLevel = this;
+
+        gameTable.style.backgroundImage = "url('icons/table/table-" + selectedBtnLevel.dataset.level + ".svg')";
     });
 
 }
@@ -75,5 +86,10 @@ function createImgShape(imgName, imgType, imgAlt = '') {
     imageNode.alt = imgAlt;
 
     return imageNode
+}
+
+
+function changeStrokeColorSvgChildren(svg, color) {
+
 }
 // Helper Functions end

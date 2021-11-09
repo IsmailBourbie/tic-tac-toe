@@ -28,9 +28,9 @@
                             </button>
                         </div>
                         <div class="choose-level">
-                            <button id="easy-level" class="change-level-btn selected">EASY</button>
-                            <button id="medium-level" class="change-level-btn">MEDIUM</button>
-                            <button id="hard-level" class="change-level-btn">HARD</button>
+                            <button id="easy-level" data-level="easy" class="change-level-btn selected">EASY</button>
+                            <button id="medium-level" data-level="medium" class="change-level-btn">MEDIUM</button>
+                            <button id="hard-level" data-level="hard" class="change-level-btn">HARD</button>
                         </div>
                     </div>
                 </div>
@@ -62,21 +62,7 @@
         <div class="game">
             <div class="container text-center">
                 <div class="game-content">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="448" height="448" viewBox="0 0 448 448">
-                        <g id="line" transform="translate(9.3 -1)">
-                            <line id="Line_4" data-name="Line 4" x1="448" transform="translate(-9.3 301)" fill="none"
-                                stroke="#c3a9ff" stroke-width="8" />
-                            <line id="Line_3" data-name="Line 3" x1="448" transform="translate(-9.3 153)" fill="none"
-                                stroke="#c3a9ff" stroke-width="8" />
-                            <line id="Line_2" data-name="Line 2" y1="448" transform="translate(290.7 1)" fill="none"
-                                stroke="#c3a9ff" stroke-width="8" />
-                            <line id="Line_1" data-name="Line 1" y1="448" transform="translate(143 1)" fill="none"
-                                stroke="#c3a9ff" stroke-width="8" />
-                        </g>
-                    </svg>
-
-
-                    <table class="tabelGame">
+                    <table id="gameTable" class="tabelGame">
                         <tbody>
                             <tr class="rows1">
                                 <td class="case" id="case1" role="button"></td>

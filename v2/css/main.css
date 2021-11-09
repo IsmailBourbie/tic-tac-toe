@@ -80,6 +80,9 @@ nav .config-icons .icon:hover img {
   z-index: 2;
   position: relative;
   border-spacing: 8px;
+  background-image: url("../icons/table/table-nrml.svg");
+  background-repeat: no-repeat;
+  transition: background 0.5s ease-in;
 }
 .game .game-content table tbody tr {
   font-weight: 100;
