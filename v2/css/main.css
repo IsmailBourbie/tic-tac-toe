@@ -181,10 +181,10 @@ footer .container {
 }
 footer .container .copyright {
   font-size: 16px;
-  color: #bfb7d3;
+  color: #d1ced9;
 }
 footer .container .copyright a {
-  color: #bfb7d3;
+  color: #d1ced9;
   text-decoration: none;
 }
 footer .container .copyright a:hover {
@@ -193,7 +193,7 @@ footer .container .copyright a:hover {
   transition: all 0.3s ease-in-out;
 }
 footer .container .source-code a {
-  color: #bfb7d3;
+  color: #d1ced9;
   text-decoration: none;
 }
 footer .container .source-code a:hover {
