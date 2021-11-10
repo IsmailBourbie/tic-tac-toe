@@ -1,0 +1,263 @@
+@import 'myvariables';
+@import 'mymixins';
+
+
+
+body,
+html {
+    min-height: 100%;
+}
+
+// Custom properties start 
+.normal-theme {
+    --color-primary: #{$primary};
+    --filter: invert(67%) sepia(52%) saturate(955%) hue-rotate(203deg) brightness(104%) contrast(101%);
+}
+
+.easy-theme {
+    --color-primary: #{$cyan};
+    --filter: invert(86%) sepia(19%) saturate(478%) hue-rotate(128deg) brightness(95%) contrast(98%);
+}
+
+.medium-theme {
+    --color-primary: #{$yellow};
+    --filter: invert(89%) sepia(18%) saturate(1191%) hue-rotate(310deg) brightness(119%) contrast(97%);
+}
+
+.hard-theme {
+    --color-primary: #{$red};
+    --filter: invert(81%) sepia(12%) saturate(2165%) hue-rotate(300deg) brightness(105%) contrast(106%);
+}
+
+
+// Custom properties end
+
+// NAVBAR START
+
+nav {
+    padding: 15px 0;
+
+    .choose-vs {
+        display: inline-block;
+        border: 1px solid var(--color-primary);
+        border-radius: 5px;
+
+        button {
+            @include choose-btn(150px);
+        }
+    }
+
+    .vs-computer {
+
+        display: none;
+
+        .back-to-choose-vs {
+            display: inline-block;
+            margin-right: 15px;
+
+            button {
+                @include choose-btn(31px, 31px);
+                background-color: var(--color-primary);
+                border-radius: 5px;
+
+            }
+        }
+
+        .choose-level {
+            display: inline-block;
+            border: 1px solid var(--color-primary);
+            border-radius: 5px;
+            transition: all .3s ease-in-out;
+
+            button {
+                @include choose-btn;
+            }
+        }
+
+    }
+
+    .config-icons {
+        list-style: none;
+        margin: 0;
+
+        .icon {
+            width: 30px;
+            height: 30px;
+            display: inline-block;
+            cursor: pointer;
+            filter: var(--filter);
+            transition: all .25s ease-in-out;
+
+
+            &:hover {
+                transform: translateY(-1px);
+                transition: all .3s ease-in-out;
+            }
+
+            &#volume-up {
+                background-image: url('../icons/volume_up.svg');
+            }
+
+            &#replay {
+                background-image: url('../icons/replay.svg');
+            }
+
+            &#clear {
+                background-image: url('../icons/clear.svg');
+            }
+
+        }
+    }
+}
+
+// NAVBAR END
+
+// GAME TABLE START
+.game {
+    padding: 100px 0;
+
+    .game-content {
+        position: relative;
+        display: inline-block;
+
+        svg {
+            position: absolute;
+            left: 0;
+            z-index: 1;
+
+        }
+
+        table {
+            margin: 0 auto;
+            z-index: 2;
+            position: relative;
+            border-spacing: 8px;
+
+            background-image: url('../icons/table/table-nrml.svg');
+            background-repeat: no-repeat;
+            transition: background .5s ease-in;
+
+            tbody {
+                tr {
+                    font-weight: 100;
+
+                    td {
+                        width: 140px;
+                        height: 140px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// GAME TABLE END
+
+
+// GAME RESULT START
+.result {
+    .result-col {
+
+        >div {
+            transition: all .3s ease-in-out;
+            display: inline-block;
+            background-color: var(--color-primary);
+            color: $white;
+            width: 100px;
+            height: 60px;
+            max-height: 60px;
+            padding: 10px;
+            border-radius: 8px;
+
+            &.x-result {
+                text-align: left;
+            }
+
+            &.ties-result {
+                text-align: center;
+                width: 70px;
+
+                .result-counter {
+                    font-size: 25px;
+                }
+
+                p {
+                    margin: 0;
+                    font-size: 14px;
+                    font-weight: bold;
+                    letter-spacing: 1px;
+                }
+            }
+
+            &.o-result {
+                text-align: right;
+            }
+
+
+            .result-counter {
+                font-size: 30px;
+                font-weight: bold;
+                margin: 10px;
+            }
+
+            svg {
+                position: relative;
+                top: 2px;
+            }
+        }
+    }
+}
+
+// GAME RESULT END
+
+
+// FOOTER START
+footer {
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+
+    .container {
+        padding: 20px;
+        border-top: 1px solid #dbe2e8;
+
+        .copyright {
+            font-size: 16px;
+            color: $purpleTight;
+
+            a {
+                color: $purpleTight;
+                text-decoration: none;
+
+                &:hover {
+                    background-color: $purple;
+                    color: $white;
+                    transition: all .3s ease-in-out;
+                }
+            }
+        }
+
+        .source-code {
+            a {
+                color: $purpleTight;
+                text-decoration: none;
+
+                &:hover {
+                    transition: all .3s ease-in-out;
+                    color: var(--color-primary);
+                }
+            }
+        }
+    }
+
+}
+
+// FOOTER END
+
+
+
+
+@import 'myframework';

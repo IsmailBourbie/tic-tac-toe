@@ -1,0 +1,23 @@
+button.selected {
+
+    border: 1px solid var(--color-primary) !important;
+    border-radius: 3px;
+    background-color: var(--color-primary) !important;
+    color: $white !important;
+}
+
+button {
+    transition: all .5s ease-in-out;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-center {
+    text-align: center;
+}

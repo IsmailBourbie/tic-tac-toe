@@ -1,0 +1,9 @@
+@mixin choose-btn($w:90px, $h:30px) {
+    background-color: transparent;
+    color: var(--color-primary);
+    border: none;
+    width: $w;
+    height: $h;
+    cursor: pointer;
+    margin: 0 -2px;
+}

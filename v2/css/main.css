@@ -5,18 +5,22 @@ html {
 
 .normal-theme {
   --color-primary: #c3a9ff;
+  --filter: invert(67%) sepia(52%) saturate(955%) hue-rotate(203deg) brightness(104%) contrast(101%);
 }
 
 .easy-theme {
   --color-primary: #a0e7e5;
+  --filter: invert(86%) sepia(19%) saturate(478%) hue-rotate(128deg) brightness(95%) contrast(98%);
 }
 
 .medium-theme {
   --color-primary: #fbe7c6;
+  --filter: invert(89%) sepia(18%) saturate(1191%) hue-rotate(310deg) brightness(119%) contrast(97%);
 }
 
 .hard-theme {
   --color-primary: #ffaebc;
+  --filter: invert(81%) sepia(12%) saturate(2165%) hue-rotate(300deg) brightness(105%) contrast(106%);
 }
 
 nav {
@@ -34,6 +38,7 @@ nav .choose-vs button {
   width: 150px;
   height: 30px;
   cursor: pointer;
+  margin: 0 -2px;
 }
 nav .vs-computer {
   display: none;
@@ -49,6 +54,7 @@ nav .vs-computer .back-to-choose-vs button {
   width: 31px;
   height: 31px;
   cursor: pointer;
+  margin: 0 -2px;
   background-color: var(--color-primary);
   border-radius: 5px;
 }
@@ -56,6 +62,7 @@ nav .vs-computer .choose-level {
   display: inline-block;
   border: 1px solid var(--color-primary);
   border-radius: 5px;
+  transition: all 0.3s ease-in-out;
 }
 nav .vs-computer .choose-level button {
   background-color: transparent;
@@ -64,6 +71,7 @@ nav .vs-computer .choose-level button {
   width: 90px;
   height: 30px;
   cursor: pointer;
+  margin: 0 -2px;
 }
 nav .config-icons {
   list-style: none;
@@ -74,6 +82,8 @@ nav .config-icons .icon {
   height: 30px;
   display: inline-block;
   cursor: pointer;
+  filter: var(--filter);
+  transition: all 0.25s ease-in-out;
 }
 nav .config-icons .icon:hover {
   transform: translateY(-1px);
@@ -119,6 +129,7 @@ nav .config-icons .icon#clear {
 }
 
 .result .result-col > div {
+  transition: all 0.3s ease-in-out;
   display: inline-block;
   background-color: var(--color-primary);
   color: #ffffff;
@@ -195,6 +206,10 @@ button.selected {
   border-radius: 3px;
   background-color: var(--color-primary) !important;
   color: #ffffff !important;
+}
+
+button {
+  transition: all 0.5s ease-in-out;
 }
 
 .text-left {

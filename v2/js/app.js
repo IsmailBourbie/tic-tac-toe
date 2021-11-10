@@ -1,5 +1,6 @@
 // Change vs-player Start
-let vsComputerBtn = document.getElementById('vs-computer-btn'),
+let htmlElement = document.getElementsByTagName('html')[0],
+    vsComputerBtn = document.getElementById('vs-computer-btn'),
     vsComputerContainer = document.getElementById('vs-computer-container'),
     backToVsFriend = document.getElementById('back-to-vs-friend'),
     vsFriendBtn = document.getElementById('vs-friend-btn'),
@@ -8,12 +9,15 @@ let vsComputerBtn = document.getElementById('vs-computer-btn'),
     gameTable = document.getElementById('gameTable');
 
 vsComputerBtn.addEventListener('click', function () {
+
     this.parentElement.style.display = 'none';
     vsComputerContainer.style.display = 'inline-block';
 
+    let level = selectedBtnLevel.dataset.level;
 
-    // Change the mode to easy
-    gameTable.style.backgroundImage = "url('icons/table/table-" + selectedBtnLevel.dataset.level + ".svg')";
+    // Change the theme to easy
+    gameTable.style.backgroundImage = "url('icons/table/table-" + level + ".svg')";
+    htmlElement.className = level + '-theme';
 });
 
 vsFriendBtn.addEventListener('click', function () {
@@ -27,6 +31,7 @@ backToVsFriend.addEventListener('click', function () {
 
     // Change the mode to nrml
     gameTable.style.backgroundImage = "url('icons/table/table-nrml.svg')";
+    htmlElement.className = 'normal-theme';
 
 });
 // Change vs-player End
@@ -42,7 +47,10 @@ for (let i = 0; i < changeLevelBtn.length; i++) {
 
         selectedBtnLevel = this;
 
-        gameTable.style.backgroundImage = "url('icons/table/table-" + selectedBtnLevel.dataset.level + ".svg')";
+        let level = selectedBtnLevel.dataset.level;
+
+        gameTable.style.backgroundImage = "url('icons/table/table-" + level + ".svg')";
+        htmlElement.className = level + '-theme';
     });
 
 }

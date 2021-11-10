@@ -3,5 +3,5 @@
                             <path id="Path_3" data-name="Path 3" d="M0,0H30V30H0Z" fill="none" />
                             <path id="Path_4" data-name="Path 4"
                                 d="M3,10.529v7.59H8.054l6.318,6.325V4.2L8.054,10.529Zm17.058,3.795a5.693,5.693,0,0,0-3.159-5.1V19.409A5.66,5.66,0,0,0,20.058,14.324ZM16.9,3.23V5.836a8.861,8.861,0,0,1,0,16.976v2.606a11.38,11.38,0,0,0,0-22.188Z"
-                                transform="translate(0.628 0.676)" fill="#c3a9ff" />
+                                transform="translate(0.628 0.676)" fill="#000000" />
                         </svg>
