@@ -54,13 +54,23 @@ nav .config-icons {
   margin: 0;
 }
 nav .config-icons .icon {
-  display: inline;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
   cursor: pointer;
-  margin-left: 5px;
 }
-nav .config-icons .icon:hover img {
+nav .config-icons .icon:hover {
   transform: translateY(-1px);
   transition: all 0.3s ease-in-out;
+}
+nav .config-icons .icon#volume-up {
+  background-image: url("../icons/volume_up.svg");
+}
+nav .config-icons .icon#replay {
+  background-image: url("../icons/replay.svg");
+}
+nav .config-icons .icon#clear {
+  background-image: url("../icons/clear.svg");
 }
 
 .game {
