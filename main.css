@@ -2,12 +2,17 @@ body {
   font-family: 'FINDER', sans-serif;
 }
 .container {
+  height: 100vh;
+  padding: 30px 0;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .layout {
-  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 100%;
 }
 div.header {
   display: flex;
@@ -15,40 +20,40 @@ div.header {
   align-items: center;
 }
 select {
-  height: 40px;
-  font-size: 20px;
-  background-color: white;
+  font-size: 26px;
+  background-color: #c3a9ff;
+  color: #333;
   border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
 }
 select:hover {
   cursor: pointer;
 }
 .displayGame {
-  margin-top: 100px;
   position: relative;
 }
 .tabelGame {
-  width: 500px;
-  height: 500px;
+  width: 520px;
+  height: 520px;
   text-align: center;
+  border-spacing: 0;
   border: none;
 }
 td {
-  width: 125px;
-  height: 125px;
-  max-width: 125px;
-  max-height: 125px;
+  height: 174px;
+  width: 174px;
   font-size: 120px;
 }
 #case2,
 #case5,
 #case8 {
-  border-left: 5px solid #1a5f98;
-  border-right: 5px solid #1a5f98;
+  border-left: 5px solid #c3a9ff;
+  border-right: 5px solid #c3a9ff;
 }
 .rows2 td {
-  border-bottom: 5px solid #1a5f98;
-  border-top: 5px solid #1a5f98;
+  border-bottom: 5px solid #c3a9ff;
+  border-top: 5px solid #c3a9ff;
 }
 td:hover {
   cursor: pointer;
@@ -59,17 +64,31 @@ td:hover {
   width: 40px;
   height: 40px;
   cursor: pointer;
+  background: transparent;
 }
 .alert {
-  position: absolute;
-  top: 101px;
-  background-color: rgba(13, 161, 146, 0.49);
-  width: 500px;
-  height: 48px;
-  z-index: 1;
+  font-family: arial;
+  opacity: 0;
+  color: #333;
+  border: 3px solid #c3a9ff;
+  background: rgb(195 169 255 / 70%);
+  border-radius: 5px;
   text-align: center;
-  padding: 10px 0;
-  font-size: 40px;
+  padding: 10px 20px;
+  width: 500px;
+  min-height: 60px;
+  font-size: 28px;
+  font-weight: bold;
+  padding: 10px 20px;
+  transition: opacity .3s ease-in-out;
+}
+.alert.show {
+  opacity: 1;
+}
+.alert.show > span {
+  font-family: 'FINDER', sans-serif;
+  font-size: 36px;
+  margin: 0 10px;
 }
 
 button:focus,select:focus {

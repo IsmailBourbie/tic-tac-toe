@@ -37,16 +37,16 @@ function verifyIfTereIsWinner() {
     
     "use strict";
     if (arrayRows.indexOf(3) > -1) {
-        document.getElementById("notif").setAttribute("class", "alert"); // show the notifcation
-        document.getElementById("notif").textContent = "The winner is: 'X' Player"; // write in the notif
+        document.getElementById("notif").classList.add("show"); // show the notifcation
+        document.getElementById("notif").innerHTML = "<span style='color:#f5997c'>X</span> Player wins!!"; // write in the notif
         setOnclick("");
     } else if (arrayRows.indexOf(-3) > -1) {
-        document.getElementById("notif").setAttribute("class", "alert");
-        document.getElementById("notif").textContent = "The winner is: 'O' Player";
+        document.getElementById("notif").classList.add("show");
+        document.getElementById("notif").innerHTML = "<span style='color:#b6e2a1'>O</span> Player wins!!";
         setOnclick("");
     } else if (casesIsEmpty() === false) {
-        document.getElementById("notif").setAttribute("class", "alert");
-        document.getElementById("notif").textContent = "Draw !!";
+        document.getElementById("notif").classList.add("show");
+        document.getElementById("notif").innerHTML = "Draw";
     }
 }
 function fillArray(cases, x_o) {
@@ -402,7 +402,7 @@ function hardLevel(cases) {
     var input = document.getElementById(cases);
     if (input.textContent === "") { // if the case is empty so u can play it
         input.textContent = howIsPlay;
-        document.getElementById(cases).style.color = "#5C91CF";
+        document.getElementById(cases).style.color = "#f5997c";
         if (cases === "case5") { // if adverser play center .. change the var center to true
             center = true;
         }
@@ -458,7 +458,7 @@ function EasyLevel(cases) {
     var input = document.getElementById(cases);
     if (input.textContent === "") {
         input.textContent = howIsPlay;
-        document.getElementById(cases).style.color = "#5C91CF";
+        document.getElementById(cases).style.color = "#f5997c";
         if (cases === "case5") {
             center = true;
         }
@@ -498,7 +498,7 @@ function mediumLevel(cases) {
     var input = document.getElementById(cases);
     if (input.textContent === "") {
         input.textContent = howIsPlay;
-        document.getElementById(cases).style.color = "#5C91CF";
+        document.getElementById(cases).style.color = "#f5997c";
         if (cases === "case5") {
             center = true;
         }
@@ -525,10 +525,10 @@ function withFriend(cases) {
         input.textContent = howIsPlay;
         if (howIsPlay === "X") {
             fillArray(cases, 1);
-            document.getElementById(cases).style.color = "#5C91CF";
+            document.getElementById(cases).style.color = "#f5997c";
         } else {
             fillArray(cases, -1);
-            document.getElementById(cases).style.color = "#00CBA2";
+            document.getElementById(cases).style.color = "#B6E2A1";
         }
         howIsPlay = changePlayer();
     }
@@ -543,7 +543,7 @@ function restCases() {
     for (i = 0; i < 9; i += 1) {
         document.getElementsByTagName("TD")[i].textContent = "";
         arrayRows[i] = 0;
-        document.getElementsByTagName("TD")[i].style.color = "#00CBA2";
+        document.getElementsByTagName("TD")[i].style.color = "#B6E2A1";
     }
     center = false;
     howIsPlay = "X";
@@ -553,7 +553,7 @@ function witchLevel() {
     // get the level choosen
     
     "use strict";
-    document.getElementById("notif").removeAttribute("class");
+    document.getElementById("notif").classList.remove("show");
     document.getElementById("notif").textContent = "";
     var witchValue = document.getElementById("selectOption");
     if (witchValue.value === "1") {
@@ -575,7 +575,7 @@ function replay() {
     
     "use strict";
     restCases();
-    document.getElementById("notif").removeAttribute("class");
+    document.getElementById("notif").classList.remove("show");
     document.getElementById("notif").textContent = "";
     witchLevel();
 }
