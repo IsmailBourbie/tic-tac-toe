@@ -1,33 +1,42 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>Tic Tac toe</title>
-        <link rel="stylesheet" href="main.css">
-    </head>
-    <body>
+
+<head>
+    <meta charset="utf-8">
+    <title>Tic Tac toe</title>
+    <link href="https://fonts.cdnfonts.com/css/finder-2" rel="stylesheet">                
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <div class="container">
+
         <div class="layout">
             <div class="header">
-                <div class="slectBox">
-                    <select id="selectOption" onchange="witchLevel()">
-                        <option selected disabled hidden="hidden">Choose a level</option>
-                        <option value="1" id="Esay">Esay</option>
-                        <option value="2" id="Medium">Medium</option>
-                        <option value="3" id="Hard">Hard</option>
-                        <optgroup label="──────────"></optgroup>
-                        <option value="4" id="withFriend">Play with a friend</option>
-                    </select> 
-                     <button id="replay" type="button" onclick="replay()">Replay</button>
-                </div>
+                <select id="selectOption" onchange="witchLevel()">
+                    <option selected disabled hidden="hidden">Choose a level</option>
+                    <option value="1" id="Esay">Esay</option>
+                    <option value="2" id="Medium">Medium</option>
+                    <option value="3" id="Hard">Hard</option>
+                    <optgroup label="──────────"></optgroup>
+                    <option value="4" id="withFriend">With a friend</option>
+                </select>
+                <div>
+                    <button class="nav-btn">
+                        <img src="icons/sound.svg" alt="replay" title="replay">
+                    </button>
+                    <button class="nav-btn" id="replay" type="button" onclick="replay()">
+                        <img src="icons/clear.svg" alt="replay" title="replay">
+                    </button>                    
+                </div>        
             </div>
-            <div class="" id="notif"></div>
             <div class="displayGame">
                 <table class="tabelGame">
                     <tbody>
                         <tr class="rows1">
-                            <td class="case" id="case1" role="button" ></td>
-                            <td class="case" id="case2" role="button" ></td>
-                            <td class="case" id="case3" role="button" ></td>
+                            <td class="case" id="case1" role="button"></td>
+                            <td class="case" id="case2" role="button"></td>
+                            <td class="case" id="case3" role="button"></td>
                         </tr>
                         <tr class="rows2">
                             <td class="case" id="case4" role="button"></td>
@@ -43,6 +52,10 @@
                 </table>
             </div>
         </div>
-        <script src="main.js"></script>
-    </body>
+        <div class="" id="notif"></div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
 </html>

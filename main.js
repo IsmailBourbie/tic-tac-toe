@@ -402,7 +402,7 @@ function hardLevel(cases) {
     var input = document.getElementById(cases);
     if (input.textContent === "") { // if the case is empty so u can play it
         input.textContent = howIsPlay;
-        document.getElementById(cases).style.color = "black";
+        document.getElementById(cases).style.color = "#5C91CF";
         if (cases === "case5") { // if adverser play center .. change the var center to true
             center = true;
         }
@@ -458,7 +458,7 @@ function EasyLevel(cases) {
     var input = document.getElementById(cases);
     if (input.textContent === "") {
         input.textContent = howIsPlay;
-        document.getElementById(cases).style.color = "black";
+        document.getElementById(cases).style.color = "#5C91CF";
         if (cases === "case5") {
             center = true;
         }
@@ -498,7 +498,7 @@ function mediumLevel(cases) {
     var input = document.getElementById(cases);
     if (input.textContent === "") {
         input.textContent = howIsPlay;
-        document.getElementById(cases).style.color = "black";
+        document.getElementById(cases).style.color = "#5C91CF";
         if (cases === "case5") {
             center = true;
         }
@@ -525,10 +525,10 @@ function withFriend(cases) {
         input.textContent = howIsPlay;
         if (howIsPlay === "X") {
             fillArray(cases, 1);
-            document.getElementById(cases).style.color = "black";
+            document.getElementById(cases).style.color = "#5C91CF";
         } else {
             fillArray(cases, -1);
-            document.getElementById(cases).style.color = "white";
+            document.getElementById(cases).style.color = "#00CBA2";
         }
         howIsPlay = changePlayer();
     }
@@ -543,7 +543,7 @@ function restCases() {
     for (i = 0; i < 9; i += 1) {
         document.getElementsByTagName("TD")[i].textContent = "";
         arrayRows[i] = 0;
-        document.getElementsByTagName("TD")[i].style.color = "white";
+        document.getElementsByTagName("TD")[i].style.color = "#00CBA2";
     }
     center = false;
     howIsPlay = "X";
